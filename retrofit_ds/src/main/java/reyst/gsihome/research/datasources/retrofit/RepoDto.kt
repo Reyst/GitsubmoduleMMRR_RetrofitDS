@@ -12,6 +12,9 @@ data class RepoDto(
     override val name: String,
 
     @SerializedName("full_name")
-    override val fullName: String
+    override val fullName: String,
+
+    @Transient
+    override val isChecked: Boolean = true
 
 ): IRepoDto
